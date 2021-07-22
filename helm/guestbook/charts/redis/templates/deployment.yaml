@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: {{ include "redis.fullname" . }}
+  namespace: {{ .Values.namespace }}
   labels:
     {{- include "redis.labels" . | nindent 4 }}
     {{- toYaml .Values.labels | nindent 4 }}
