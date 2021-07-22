@@ -11,7 +11,12 @@ image:
 nameOverride: ""
 fullnameOverride: "frontend"
 
-
+matchLabels:
+  app: guestbook
+  tier: frontend
+labels:
+  app: guestbook
+  tier: frontend
 service:
   type: ClusterIP
   port: 80

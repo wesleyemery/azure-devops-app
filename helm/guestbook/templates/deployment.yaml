@@ -10,13 +10,11 @@ spec:
   {{- end }}
   selector:
     matchLabels:
-      app: guestbook
-      tier: frontend
+      {{- toYaml .Values.matchLabels | nindent 6 }}
   template:
     metadata:
       labels:
-        app: guestbook
-        tier: frontend
+        {{- toYaml .Values.labels | nindent 8 }}
     spec:
       containers:
         - name: {{ .Values.image.name }}
