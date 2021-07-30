@@ -4,6 +4,7 @@
 
 replicaCount: 3
 namespace: anheuser-dev
+containerPort: 80
 
 image:
   name: "php-redis"
